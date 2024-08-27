@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float acceleration = 0.1f;
+    /// <summary>
+    /// the force to be applied in the direction
+    /// of axis inputs.
+    /// </summary>
+    public float force = 5.0f;
 
     private Rigidbody rg;
 
@@ -22,6 +26,6 @@ public class PlayerController : MonoBehaviour
         horizontalDirection = Vector3.right * Input.GetAxis("Horizontal");
         direction = verticalDirection + horizontalDirection;
 
-        rg.AddForce(direction * acceleration, ForceMode.Force);
+        rg.AddForce(direction * force, ForceMode.Force);
     }
 }
