@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     /// <summary>
-    /// the force to be applied in the direction
+    /// The force to be applied in the direction
     /// of axis inputs.
     /// </summary>
     public float force = 5.0f;
