@@ -19,14 +19,7 @@ services:
             timeout: 3s
             retries: 5
     nakama:
-        container_name: nakama
-        image: registry.heroiclabs.com/heroiclabs/nakama:3.22.0
-        entrypoint:
-            - "/bin/sh"
-            - "-ecx"
-            - >
-              /nakama/nakama migrate up --database.address postgres:localdb@postgres:5432/nakama &&
-              exec /nakama/nakama --database.address postgres:localdb@postgres:5432/nakama --config /nakama/data/nakama.yml
+        build: .
         restart: always
         links:
             - "postgres:db"
@@ -34,7 +27,7 @@ services:
             postgres:
                 condition: service_healthy
         volumes:
-            - ./:/nakama/data
+            - ./logfile.log:/nakama/data/logfile.log
         expose:
             - "7349"
             - "7350"

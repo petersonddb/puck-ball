@@ -67,9 +67,13 @@
     <Compile Include="Assets/Player/PlayerName.cs" />
     <Compile Include="Assets/Accounts/Account.cs" />
     <Compile Include="Assets/ServerClient/Accounts.cs" />
-    <Compile Include="Assets/Login/PlayerAccountChecker.cs" />
+    <Compile Include="Assets/ServerClient/PlayerPosition.cs" />
+    <Compile Include="Assets/GameManager/GameManager.cs" />
     <Compile Include="Assets/ServerClient/Authentication.cs" />
+    <Compile Include="Assets/ServerClient/Matches.cs" />
+    <Compile Include="Assets/ServerClient/ServerManager.cs" />
     <Compile Include="Assets/ServerClient/API.cs" />
+    <Compile Include="Assets/ServerClient/Connection.cs" />
     <Compile Include="Assets/Player/PlayerController.cs" />
     <Compile Include="Assets/Login/LoginButton.cs" />
   </ItemGroup>
@@ -429,20 +433,20 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.33f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.5/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Satori">
       <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Satori.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.5/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Nakama">
       <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Nakama.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

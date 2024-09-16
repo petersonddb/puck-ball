@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class PlayerName : MonoBehaviour
 {
-    public GameObject Player;
-
-    private Transform playerTransform;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerTransform = GetComponentInParent<Transform>();
-    }
+    public GameObject target;
 
     // Update is called once per frame
     void Update()
     {
-        // transform.position = playerTransform.position + new Vector3(0f, 10f, 0f);
+        // transform.RotateAround(
+        //     target.transform.position, new Vector3 { x = 1 }, -target.transform.eulerAngles.x);
+
+        // transform.RotateAround
     }
 }

@@ -426,6 +426,10 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Satori">
+      <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Satori.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.5/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
@@ -436,6 +440,10 @@
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.4.4/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nakama">
+      <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Nakama.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
@@ -456,14 +464,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Satori">
-      <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Satori.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Nakama">
-      <HintPath>Assets/Packages/Nakama/Runtime/Plugins/Nakama.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

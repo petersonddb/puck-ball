@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Threading.Tasks;
 
 namespace ServerClient
 {
@@ -15,10 +16,22 @@ namespace ServerClient
                 Session = t.Result;
                 onSuccess?.Invoke();
                 Debug.Log($"Authenticated with {deviceId} Device ID");
-            }, System.Threading.Tasks.TaskContinuationOptions.OnlyOnRanToCompletion).ContinueWith(t => {
+            }, TaskContinuationOptions.OnlyOnRanToCompletion).ContinueWith(t => {
                 onFailure?.Invoke(t.Exception);
                 Debug.Log($"Error authenticating with {deviceId} Device ID: {t.Exception.Message}");
-            }, System.Threading.Tasks.TaskContinuationOptions.NotOnRanToCompletion);
+            }, TaskContinuationOptions.NotOnRanToCompletion);
+        }
+
+        public void AuthenticateWithEmail(string email, string password, Action onSuccess, Action<Exception> onFailure = null)
+        {
+            api.Client.AuthenticateEmailAsync(email, password).ContinueWith(t => {
+                Session = t.Result;
+                onSuccess?.Invoke();
+                Debug.Log($"Authenticated with {email}");
+            }, TaskContinuationOptions.OnlyOnRanToCompletion).ContinueWith(t => {
+                onFailure?.Invoke(t.Exception);
+                Debug.Log($"Error authenticating with {email}: {t.Exception.Message}");
+            }, TaskContinuationOptions.NotOnRanToCompletion);
         }
 
         public Authentication(API api)
